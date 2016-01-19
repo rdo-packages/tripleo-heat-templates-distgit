@@ -1,3 +1,5 @@
-# UUID                                  	Group Name
-#
-d68dbadf253e179673ebc7ee3c70543657164523	tripleo-heat-templates-distgit-ptl
+# UUID          Group Name
+6ddfecad023c6f4fa3ac8c4d2583c502ea675a73 	Non-Interactive Users
+649cd5f965bed1cf9dd479c1fbd459ebdacb6f05       	tripleo-heat-templates-distgit-core
+d68dbadf253e179673ebc7ee3c70543657164523        	tripleo-heat-templates-distgit-ptl
+global:Registered-Users		Registered Users
