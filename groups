@@ -1,5 +1,5 @@
 # UUID                                  	Group Name
 #
-649cd5f965bed1cf9dd479c1fbd459ebdacb6f05	tripleo-heat-templates-distgit-core
+649cd5f965bed1cf9dd479c1fbd459ebdacb6f05	openstack/tripleo-heat-templates-distgit-core
 d68dbadf253e179673ebc7ee3c70543657164523	openstack/tripleo-heat-templates-distgit-ptl
 global:Registered-Users                 	Registered Users
