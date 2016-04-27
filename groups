@@ -2,4 +2,5 @@
 #
 649cd5f965bed1cf9dd479c1fbd459ebdacb6f05	openstack/tripleo-heat-templates-distgit-core
 d68dbadf253e179673ebc7ee3c70543657164523	openstack/tripleo-heat-templates-distgit-ptl
+63673ea7f2ae6a5666566b1ea9f14e473d00f5a9	rdo-core
 global:Registered-Users                 	Registered Users
