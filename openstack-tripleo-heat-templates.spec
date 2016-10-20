@@ -1,17 +1,12 @@
-%global milestone .0rc3
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 Name:           openstack-tripleo-heat-templates
 Summary:        Heat templates for TripleO
 Version:        5.0.0
-Release:        0.4%{?milestone}%{?dist}
+Release:        1%{?dist}
 License:        ASL 2.0
 Group:          System Environment/Base
 URL:            https://wiki.openstack.org/wiki/TripleO
 Source0:        https://tarballs.openstack.org/tripleo-heat-templates/tripleo-heat-templates-%{upstream_version}.tar.gz
-
-#
-# patches_base=5.0.0.0rc3
-#
 
 BuildArch:      noarch
 BuildRequires:  python2-devel
@@ -59,6 +54,9 @@ fi
 %{_datadir}/%{name}
 
 %changelog
+* Thu Oct 20 2016 Haikel Guemar <hguemar@fedoraproject.org> 5.0.0-1
+- Update to 5.0.0
+
 * Tue Oct 18 2016 Alfredo Moralejo <amoralej@redhat.com> 5.0.0-0.4.0rc3
 - Update to 5.0.0.0rc3
 
