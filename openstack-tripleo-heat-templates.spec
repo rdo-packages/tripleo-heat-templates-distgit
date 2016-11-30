@@ -44,6 +44,9 @@ fi
 if [ -d examples ]; then
   rm -rf examples
 fi
+if [ -d scripts ]; then
+  cp -ar scripts %{buildroot}/%{_datadir}/%{name}
+fi
 
 if [ -d %{buildroot}/%{python2_sitelib}/tripleo_heat_merge ]; then
   rm -rf %{buildroot}/%{python2_sitelib}/tripleo_heat_merge
