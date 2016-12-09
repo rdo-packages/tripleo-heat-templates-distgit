@@ -38,14 +38,10 @@ cp -ar environments %{buildroot}/%{_datadir}/%{name}
 cp -ar network %{buildroot}/%{_datadir}/%{name}
 cp -ar validation-scripts %{buildroot}/%{_datadir}/%{name}
 cp -ar deployed-server %{buildroot}/%{_datadir}/%{name}
-if [ -d ci ]; then
-  cp -ar ci %{buildroot}/%{_datadir}/%{name}
-fi
+cp -ar ci %{buildroot}/%{_datadir}/%{name}
+cp -ar scripts %{buildroot}/%{_datadir}/%{name}
 if [ -d examples ]; then
   rm -rf examples
-fi
-if [ -d scripts ]; then
-  cp -ar scripts %{buildroot}/%{_datadir}/%{name}
 fi
 
 if [ -d %{buildroot}/%{python2_sitelib}/tripleo_heat_merge ]; then
