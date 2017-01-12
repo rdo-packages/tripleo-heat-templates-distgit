@@ -40,6 +40,7 @@ cp -ar validation-scripts %{buildroot}/%{_datadir}/%{name}
 cp -ar deployed-server %{buildroot}/%{_datadir}/%{name}
 cp -ar ci %{buildroot}/%{_datadir}/%{name}
 cp -ar scripts %{buildroot}/%{_datadir}/%{name}
+cp -ar tools %{buildroot}/%{_datadir}/%{name}
 if [ -d examples ]; then
   rm -rf examples
 fi
