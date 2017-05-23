@@ -7,8 +7,8 @@
 
 Name:           openstack-tripleo-heat-templates
 Summary:        Heat templates for TripleO
-Version:        2.0.0
-Release:        3%{alphatag}%{?dist}
+Version:        2.2.0
+Release:        1%{alphatag}%{?dist}
 License:        ASL 2.0
 Group:          System Environment/Base
 URL:            https://wiki.openstack.org/wiki/TripleO
@@ -61,6 +61,9 @@ fi
 %{_datadir}/%{name}
 
 %changelog
+* Tue May 23 2017 Alfredo Moralejo <amoralej@redhat.com> 2.2.0-1%{alphatag}
+- Update to 2.2.0
+
 * Fri Apr 15 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 2.0.0-3.f3215d2git
 - Fix BR: git
 
