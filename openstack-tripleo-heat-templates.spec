@@ -1,19 +1,15 @@
-%global commit f3215d28ba6693e8e513cc3ae2aba3e500a0a4f0
-%global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global alphatag .%{shortcommit}git
 %global project tripleo-heat-templates
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           openstack-tripleo-heat-templates
 Summary:        Heat templates for TripleO
-Version:        2.0.0
-Release:        3%{alphatag}%{?dist}
+Version:        2.2.0
+Release:        1%{?dist}
 License:        ASL 2.0
 Group:          System Environment/Base
 URL:            https://wiki.openstack.org/wiki/TripleO
-Source0:        https://github.com/openstack/%{project}/archive/%{commit}.tar.gz#/%{project}-%{commit}.tar.gz
-Patch0:         0001-Enable-galera-replication-for-Mariadb-10.1.patch
+Source0:        https://tarballs.openstack.org/%{project}/%{project}-%{upstream_version}.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  python2-devel
@@ -29,7 +25,7 @@ OpenStack TripleO Heat Templates is a collection of templates and tools for
 building Heat Templates to do deployments of OpenStack.
 
 %prep
-%autosetup -n %{project}-%{commit} -S git
+%autosetup -n %{project}-%{upstream_version} -S git
 
 %build
 %{__python2} setup.py build
@@ -61,6 +57,9 @@ fi
 %{_datadir}/%{name}
 
 %changelog
+* Tue May 23 2017 Alfredo Moralejo <amoralej@redhat.com> 2.2.0-1
+- Update to 2.2.0
+
 * Fri Apr 15 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 2.0.0-3.f3215d2git
 - Fix BR: git
 
