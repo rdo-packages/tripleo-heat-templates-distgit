@@ -17,6 +17,7 @@ BuildRequires:  python-pbr
 Requires:       PyYAML
 Requires:       python-jinja2
 Requires:       python-six
+Requires:       tripleo-common
 
 %description
 OpenStack TripleO Heat Templates is a collection of templates and tools for
