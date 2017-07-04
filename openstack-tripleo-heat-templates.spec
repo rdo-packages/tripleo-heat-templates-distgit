@@ -33,6 +33,7 @@ building Heat Templates to do deployments of OpenStack.
 install -d -m 755 %{buildroot}/%{_datadir}/%{name}
 cp -ar *.yaml %{buildroot}/%{_datadir}/%{name}
 cp -ar puppet %{buildroot}/%{_datadir}/%{name}
+cp -ar common %{buildroot}/%{_datadir}/%{name}
 cp -ar docker %{buildroot}/%{_datadir}/%{name}
 cp -ar firstboot %{buildroot}/%{_datadir}/%{name}
 cp -ar extraconfig %{buildroot}/%{_datadir}/%{name}
