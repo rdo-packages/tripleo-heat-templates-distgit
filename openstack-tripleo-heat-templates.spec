@@ -18,12 +18,19 @@ Requires:       PyYAML
 Requires:       python-jinja2
 Requires:       python-six
 
+# https://launchpad.net/bugs/1708014
+# Once it merges upstream - let's remove this patch
+# but right now the patch doesn't merge because of CI timeouts.
+Patch0001:      0001-Remove-docker-references-from-stable-ocata-scenarios.patch
+
 %description
 OpenStack TripleO Heat Templates is a collection of templates and tools for
 building Heat Templates to do deployments of OpenStack.
 
 %prep
 %setup -q -n tripleo-heat-templates-%{upstream_version}
+
+%patch0001 -p1
 
 %build
 %{__python2} setup.py build
