@@ -1,12 +1,17 @@
+%global milestone .0rc1
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 Name:           openstack-tripleo-heat-templates
 Summary:        Heat templates for TripleO
-Version:        XXX
-Release:        XXX
+Version:        7.0.0
+Release:        0.1%{?milestone}%{?dist}
 License:        ASL 2.0
 Group:          System Environment/Base
 URL:            https://wiki.openstack.org/wiki/TripleO
 Source0:        https://tarballs.openstack.org/tripleo-heat-templates/tripleo-heat-templates-%{upstream_version}.tar.gz
+
+#
+# patches_base=7.0.0.0rc1
+#
 
 BuildArch:      noarch
 BuildRequires:  python2-devel
@@ -63,3 +68,6 @@ fi
 %{_datadir}/%{name}
 
 %changelog
+* Fri Aug 25 2017 Alfredo Moralejo <amoralej@redhat.com> 7.0.0-0.1.0rc1
+- Update to 7.0.0.0rc1
+
