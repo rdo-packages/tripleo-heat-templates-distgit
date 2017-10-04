@@ -1,7 +1,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 Name:           openstack-tripleo-heat-templates
 Summary:        Heat templates for TripleO
-Version:        7.0.0
+Version:        7.0.1
 Release:        1%{?dist}
 License:        ASL 2.0
 Group:          System Environment/Base
@@ -65,6 +65,9 @@ fi
 %{_datadir}/%{name}
 
 %changelog
+* Wed Oct 04 2017 rdo-trunk <javier.pena@redhat.com> 7.0.1-1
+- Update to 7.0.1
+
 * Thu Sep 14 2017 rdo-trunk <javier.pena@redhat.com> 7.0.0-1
 - Update to 7.0.0
 
