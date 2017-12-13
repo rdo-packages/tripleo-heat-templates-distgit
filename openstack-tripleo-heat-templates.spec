@@ -1,3 +1,6 @@
+# guard for package OSP does not support
+%global rhosp 0
+
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 Name:           openstack-tripleo-heat-templates
 Summary:        Heat templates for TripleO
@@ -18,6 +21,9 @@ Requires:       PyYAML
 Requires:       python-jinja2
 Requires:       python-six
 Requires:       openstack-tripleo-common >= 7.1.0
+%if 0%{rhosp} == 1
+Requires:       ansible-role-redhat-subscription
+%endif
 
 %description
 OpenStack TripleO Heat Templates is a collection of templates and tools for
