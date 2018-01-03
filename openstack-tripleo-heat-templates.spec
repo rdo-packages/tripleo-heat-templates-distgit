@@ -14,6 +14,11 @@ BuildRequires:  python-setuptools
 BuildRequires:  python-d2to1
 BuildRequires:  python-pbr
 
+%if 0%{?el7}
+Requires(pre):  centos-release-openshift-origin
+Requires:       openshift-ansible >= 3.6.0
+%endif
+
 Requires:       PyYAML
 Requires:       python-jinja2
 Requires:       python-six
