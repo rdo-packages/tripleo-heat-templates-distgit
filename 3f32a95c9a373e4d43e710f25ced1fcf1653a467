@@ -1,0 +1,10 @@
+Code-Review+1: Juan Antonio Osorio <jaosorior@gmail.com>
+Code-Review+2: Alex Schultz <aschultz@next-development.com>
+Code-Review+2: hguemar <hguemar@fedoraproject.org>
+Workflow+1: hguemar <hguemar@fedoraproject.org>
+Verified+2: Jenkins CI <admin@rpmfactory.beta.rdoproject.org>
+Submitted-by: Jenkins CI <admin@rpmfactory.beta.rdoproject.org>
+Submitted-at: Thu, 04 Jan 2018 09:06:40 +0000
+Reviewed-on: https://review.rdoproject.org/r/10950
+Project: openstack/tripleo-heat-templates-distgit
+Branch: refs/heads/rpm-master
