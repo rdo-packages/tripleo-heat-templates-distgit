@@ -47,6 +47,9 @@ cp -ar firstboot %{buildroot}/%{_datadir}/%{name}
 cp -ar extraconfig %{buildroot}/%{_datadir}/%{name}
 cp -ar environments %{buildroot}/%{_datadir}/%{name}
 cp -ar network %{buildroot}/%{_datadir}/%{name}
+if [ -d networks ]; then
+  cp -ar networks %{buildroot}/%{_datadir}/%{name}
+fi
 cp -ar validation-scripts %{buildroot}/%{_datadir}/%{name}
 cp -ar deployed-server %{buildroot}/%{_datadir}/%{name}
 cp -ar ci %{buildroot}/%{_datadir}/%{name}
