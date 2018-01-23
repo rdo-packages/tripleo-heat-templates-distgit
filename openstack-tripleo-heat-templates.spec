@@ -30,6 +30,30 @@ Requires:       ansible-role-redhat-subscription
 OpenStack TripleO Heat Templates is a collection of templates and tools for
 building Heat Templates to do deployments of OpenStack.
 
+
+%package examples
+Summary: OpenStack TripleO Heat Template Examples
+
+# Any special BuildRequires/Requires go here
+
+%description examples
+OpenStack TripleO Heat Templates is a collection of templates and tools for
+building Heat Templates to do deployments of OpenStack.
+
+This package contains examples that can be used to create new templates
+
+%package nova
+Summary: OpenStack TripleO Heat Templates for Nova
+
+# Any special BuildRequires/Requires go here
+
+%description nova
+OpenStack TripleO Heat Templates is a collection of templates and tools for
+building Heat Templates to do deployments of OpenStack.
+
+This package contains heat templates for the nova project
+
+
 %prep
 %setup -q -n tripleo-heat-templates-%{upstream_version}
 
@@ -71,5 +95,13 @@ fi
 %license LICENSE
 %{python2_sitelib}/tripleo_heat_templates-*.egg-info
 %{_datadir}/%{name}
+
+%files examples
+%{datadir}/path_to_examples/example_template1
+%{datadir}/path_to_examples/example_template2
+
+%files nova
+%{datadir}/path_to_nova/nova_template1
+%{datadir}/path_to_nova/nova_template2
 
 %changelog
