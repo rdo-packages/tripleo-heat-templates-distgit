@@ -71,5 +71,6 @@ fi
 %license LICENSE
 %{python2_sitelib}/tripleo_heat_templates-*.egg-info
 %{_datadir}/%{name}
+%exclude %{_datadir}/file_to_exclude.txt
 
 %changelog
