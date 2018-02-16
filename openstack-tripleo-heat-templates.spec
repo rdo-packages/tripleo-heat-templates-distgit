@@ -13,14 +13,14 @@ Source0:        https://tarballs.openstack.org/tripleo-heat-templates/tripleo-he
 
 BuildArch:      noarch
 BuildRequires:  python2-devel
-BuildRequires:  python-setuptools
+BuildRequires:  python2-setuptools
 BuildRequires:  python-d2to1
-BuildRequires:  python-pbr
+BuildRequires:  python2-pbr
 
 Requires:       ansible-tripleo-ipsec
 Requires:       PyYAML
-Requires:       python-jinja2
-Requires:       python-six
+Requires:       python2-jinja2
+Requires:       python2-six
 Requires:       openstack-tripleo-common >= 7.1.0
 %if 0%{rhosp} == 1
 Requires:       ansible-role-redhat-subscription
