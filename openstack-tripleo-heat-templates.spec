@@ -1,15 +1,20 @@
+%global milestone .0b1
 # guard for package OSP does not support
 %global rhosp 0
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 Name:           openstack-tripleo-heat-templates
 Summary:        Heat templates for TripleO
-Version:        8.0.0
-Release:        1%{?dist}
+Version:        9.0.0
+Release:        0.1%{?milestone}%{?dist}
 License:        ASL 2.0
 Group:          System Environment/Base
 URL:            https://wiki.openstack.org/wiki/TripleO
 Source0:        https://tarballs.openstack.org/tripleo-heat-templates/tripleo-heat-templates-%{upstream_version}.tar.gz
+
+#
+# patches_base=9.0.0.0b1
+#
 
 #
 
@@ -75,6 +80,9 @@ fi
 %{_datadir}/%{name}
 
 %changelog
+* Tue Mar 27 2018 Jon Schlueter <jschluet@redhat.com> 9.0.0-0.1.0b1
+- Update to 9.0.0.0b1
+
 * Tue Mar 13 2018 RDO <dev@lists.rdoproject.org> 8.0.0-1
 - Update to 8.0.0
 
