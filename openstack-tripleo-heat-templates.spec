@@ -11,6 +11,8 @@ Group:          System Environment/Base
 URL:            https://wiki.openstack.org/wiki/TripleO
 Source0:        https://tarballs.openstack.org/tripleo-heat-templates/tripleo-heat-templates-%{upstream_version}.tar.gz
 
+Patch0001:      0001-Use-hiera-interpolation-for-memcached_network.patch
+
 BuildArch:      noarch
 BuildRequires:  python2-devel
 BuildRequires:  python2-setuptools
@@ -31,7 +33,7 @@ OpenStack TripleO Heat Templates is a collection of templates and tools for
 building Heat Templates to do deployments of OpenStack.
 
 %prep
-%setup -q -n tripleo-heat-templates-%{upstream_version}
+%autosetup -n tripleo-heat-templates-%{upstream_version} -S git
 
 %build
 %{__python2} setup.py build

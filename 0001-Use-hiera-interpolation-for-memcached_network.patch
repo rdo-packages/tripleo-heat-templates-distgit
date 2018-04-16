@@ -1,0 +1,40 @@
+From d3d27d7ea84fe01320dee3e4fa2e2fad11640eb7 Mon Sep 17 00:00:00 2001
+From: yatin <ykarel@redhat.com>
+Date: Mon, 16 Apr 2018 08:12:48 +0530
+Subject: [PATCH] Use hiera interpolation for memcached_network
+
+After [1] iptables rules are not set for memcached service
+thus services relying on memcached were not functioning well.
+With [2] it's requrired to use hiera interpolation for service
+configs, this patch fixes it for memcached_network.
+
+[1] https://review.openstack.org/#/c/551292
+[2] https://review.openstack.org/#/c/526692
+
+Related-Bug: #1757556
+Closes-Bug: #1763009
+Change-Id: If9b274192ea4738f455a6106ff1a62eb4e7a5c91
+---
+ puppet/services/memcached.yaml | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/puppet/services/memcached.yaml b/puppet/services/memcached.yaml
+index ab11a633..21ac02b4 100644
+--- a/puppet/services/memcached.yaml
++++ b/puppet/services/memcached.yaml
+@@ -74,9 +74,10 @@ outputs:
+       config_settings:
+         memcached_network:
+           str_replace:
+-            template: "NETWORK_subnet"
++            template:
++              "%{hiera('$NETWORK_subnet')}"
+             params:
+-              NETWORK: {get_param: [ServiceNetMap, MemcachedNetwork]}
++              $NETWORK: {get_param: [ServiceNetMap, MemcachedNetwork]}
+         # NOTE: bind IP is found in hiera replacing the network name with the local node IP
+         # for the given network; replacement examples (eg. for internal_api):
+         # internal_api -> IP
+-- 
+2.13.6
+
