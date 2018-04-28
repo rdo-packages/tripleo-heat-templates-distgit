@@ -18,6 +18,7 @@ BuildRequires:  python-d2to1
 BuildRequires:  python2-pbr
 
 Requires:       ansible-tripleo-ipsec
+Requires:       ansible-role-container-registry
 Requires:       PyYAML
 Requires:       python2-jinja2
 Requires:       python2-six
