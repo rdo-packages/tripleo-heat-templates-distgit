@@ -17,6 +17,7 @@ BuildRequires:  python2-setuptools
 BuildRequires:  python-d2to1
 BuildRequires:  python2-pbr
 
+Requires:       ansible-pacemaker
 Requires:       ansible-tripleo-ipsec
 Requires:       ansible-role-container-registry
 Requires:       PyYAML
