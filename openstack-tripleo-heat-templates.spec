@@ -16,6 +16,7 @@ BuildRequires:  python-setuptools
 BuildRequires:  python-d2to1
 BuildRequires:  python-pbr
 
+Requires:       ansible-pacemaker
 Requires:       PyYAML
 Requires:       python-jinja2
 Requires:       python-six
