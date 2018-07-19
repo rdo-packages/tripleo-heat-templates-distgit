@@ -34,8 +34,6 @@ building Heat Templates to do deployments of OpenStack.
 
 %prep
 %setup -q -n tripleo-heat-templates-%{upstream_version}
-# (TODO) remove following line once https://review.openstack.org/#/c/572068 is merged
-sed -i 's/^#!\/bin\/python.*/#!\/usr\/bin\/env python -utt/' extraconfig/tasks/instanceha/check-run-nova-compute
 
 %build
 %{__python2} setup.py build
