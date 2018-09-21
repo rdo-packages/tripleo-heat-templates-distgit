@@ -37,6 +37,7 @@ BuildRequires:  python%{pydefault}-d2to1
 Requires:       ansible-pacemaker
 Requires:       ansible-tripleo-ipsec
 Requires:       ansible-role-container-registry
+Requires:       ceph-ansible
 Requires:       python%{pydefault}-jinja2
 Requires:       python%{pydefault}-six
 Requires:       openstack-tripleo-common >= 7.1.0
