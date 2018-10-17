@@ -66,6 +66,10 @@ cp -ar *.yaml %{buildroot}/%{_datadir}/%{name}
 cp -ar puppet %{buildroot}/%{_datadir}/%{name}
 cp -ar common %{buildroot}/%{_datadir}/%{name}
 cp -ar docker %{buildroot}/%{_datadir}/%{name}
+if [ -d deployment ]; then
+  cp -ar deployment %{buildroot}/%{_datadir}/%{name}
+fi
+
 if [ -d docker_config_scripts ]; then
   cp -ar docker_config_scripts %{buildroot}/%{_datadir}/%{name}
 fi
