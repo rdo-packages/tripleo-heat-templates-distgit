@@ -1,0 +1,9 @@
+Code-Review+2: Emilien Macchi <emilien@redhat.com>
+Code-Review+1: Juan Antonio Osorio <jaosorior@gmail.com>
+Workflow+1: Emilien Macchi <emilien@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Thu, 25 Oct 2018 21:20:53 +0000
+Reviewed-on: https://review.rdoproject.org/r/16994
+Project: openstack/tripleo-heat-templates-distgit
+Branch: refs/heads/rpm-master
