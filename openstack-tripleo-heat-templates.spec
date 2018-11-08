@@ -56,6 +56,13 @@ building Heat Templates to do deployments of OpenStack.
 
 %prep
 %setup -q -n tripleo-heat-templates-%{upstream_version}
+# Replace "env python" shebag to the correct python executable for the system
+# if we don't do that brp-mangle-shebangs will change it to python2
+for python_script in $(grep "/usr/bin/env python" . -rl)
+do
+    sed -i "s#/usr/bin/python #/usr/bin/%{pydefault_bin} #g" $python_script
+    sed -i "s#/usr/bin/env python.*#/usr/bin/%{pydefault_bin}#g" $python_script
+done
 
 %build
 %{pydefault_build}
