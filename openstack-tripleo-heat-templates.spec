@@ -1,14 +1,14 @@
 # Macros for py2/py3 compatibility
 %if 0%{?fedora} || 0%{?rhel} > 7
-%global pydefault 3
+%global pyver 3
 %else
-%global pydefault 2
+%global pyver 2
 %endif
 
-%global pydefault_bin python%{pydefault}
-%global pydefault_sitelib %python%{pydefault}_sitelib
-%global pydefault_install %py%{pydefault}_install
-%global pydefault_build %py%{pydefault}_build
+%global pyver_bin python%{pyver}
+%global pyver_sitelib %python%{pyver}_sitelib
+%global pyver_install %py%{pyver}_install
+%global pyver_build %py%{pyver}_build
 # End of macros for py2/py3 compatibility
 
 # guard for package OSP does not support
@@ -25,26 +25,26 @@ URL:            https://wiki.openstack.org/wiki/TripleO
 Source0:        https://tarballs.openstack.org/tripleo-heat-templates/tripleo-heat-templates-%{upstream_version}.tar.gz
 
 BuildArch:      noarch
-BuildRequires:  python%{pydefault}-devel
-BuildRequires:  python%{pydefault}-setuptools
-BuildRequires:  python%{pydefault}-pbr
-%if %{pydefault} == 2
+BuildRequires:  python%{pyver}-devel
+BuildRequires:  python%{pyver}-setuptools
+BuildRequires:  python%{pyver}-pbr
+%if %{pyver} == 2
 BuildRequires:  python-d2to1
 %else
-BuildRequires:  python%{pydefault}-d2to1
+BuildRequires:  python%{pyver}-d2to1
 %endif
 
 Requires:       ansible-pacemaker
 Requires:       ansible-tripleo-ipsec
 Requires:       ansible-role-container-registry
 Requires:       ansible-role-chrony
-Requires:       python%{pydefault}-jinja2
-Requires:       python%{pydefault}-six
+Requires:       python%{pyver}-jinja2
+Requires:       python%{pyver}-six
 Requires:       openstack-tripleo-common >= 7.1.0
-%if %{pydefault} == 2
+%if %{pyver} == 2
 Requires:       PyYAML
 %else
-Requires:       python%{pydefault}-PyYAML
+Requires:       python%{pyver}-PyYAML
 %endif
 %if 0%{rhosp} == 1
 Requires:       ansible-role-redhat-subscription
@@ -60,14 +60,14 @@ building Heat Templates to do deployments of OpenStack.
 # if we don't do that brp-mangle-shebangs will change it to python2
 for python_script in $(grep "/usr/bin/env python" . -rl)
 do
-    sed -i "s#/usr/bin/env python.*#/usr/bin/%{pydefault_bin}#g" $python_script
+    sed -i "s#/usr/bin/env python.*#/usr/bin/%{pyver_bin}#g" $python_script
 done
 
 %build
-%{pydefault_build}
+%{pyver_build}
 
 %install
-%{pydefault_install}
+%{pyver_install}
 install -d -m 755 %{buildroot}/%{_datadir}/%{name}
 cp -ar *.yaml %{buildroot}/%{_datadir}/%{name}
 cp -ar puppet %{buildroot}/%{_datadir}/%{name}
@@ -98,15 +98,15 @@ if [ -d examples ]; then
   rm -rf examples
 fi
 
-if [ -d %{buildroot}/%{pydefault_sitelib}/tripleo_heat_merge ]; then
-  rm -rf %{buildroot}/%{pydefault_sitelib}/tripleo_heat_merge
+if [ -d %{buildroot}/%{pyver_sitelib}/tripleo_heat_merge ]; then
+  rm -rf %{buildroot}/%{pyver_sitelib}/tripleo_heat_merge
   rm -f %{buildroot}/%{_bindir}/tripleo-heat-merge
 fi
 
 %files
 %doc README*
 %license LICENSE
-%{pydefault_sitelib}/tripleo_heat_templates-*.egg-info
+%{pyver_sitelib}/tripleo_heat_templates-*.egg-info
 %{_datadir}/%{name}
 
 %changelog
