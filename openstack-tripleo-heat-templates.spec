@@ -36,8 +36,10 @@ BuildRequires:  python%{pyver}-d2to1
 
 Requires:       ansible-pacemaker
 Requires:       ansible-tripleo-ipsec
+Requires:       ansible-role-atos-hsm
 Requires:       ansible-role-container-registry
 Requires:       ansible-role-chrony
+Requires:       ansible-role-thales-hsm
 Requires:       python%{pyver}-jinja2
 Requires:       python%{pyver}-six
 Requires:       openstack-tripleo-common >= 7.1.0
