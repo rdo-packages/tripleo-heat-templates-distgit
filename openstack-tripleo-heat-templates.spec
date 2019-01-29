@@ -21,6 +21,7 @@ BuildRequires:  python2-pbr
 
 Requires:       ansible-pacemaker
 Requires:       ansible-tripleo-ipsec
+Requires:       python-paunch
 Requires:       PyYAML
 Requires:       python2-jinja2
 Requires:       python2-six
