@@ -38,6 +38,7 @@ Requires:       ansible-pacemaker
 Requires:       ansible-tripleo-ipsec
 Requires:       ansible-role-container-registry
 Requires:       ansible-role-chrony
+Requires:       paunch
 Requires:       python%{pyver}-jinja2
 Requires:       python%{pyver}-six
 Requires:       openstack-tripleo-common >= 7.1.0
