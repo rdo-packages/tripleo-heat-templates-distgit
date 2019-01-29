@@ -40,6 +40,7 @@ Requires:       ansible-role-atos-hsm
 Requires:       ansible-role-container-registry
 Requires:       ansible-role-chrony
 Requires:       ansible-role-thales-hsm
+Requires:       python%{pyver}-paunch
 Requires:       python%{pyver}-jinja2
 Requires:       python%{pyver}-six
 Requires:       openstack-tripleo-common >= 7.1.0
