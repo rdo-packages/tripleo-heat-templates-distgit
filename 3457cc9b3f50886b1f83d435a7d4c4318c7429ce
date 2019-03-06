@@ -1,0 +1,8 @@
+Code-Review+2: Alex Schultz <aschultz@next-development.com>
+Workflow+1: Alex Schultz <aschultz@next-development.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Wed, 06 Mar 2019 15:51:50 +0000
+Reviewed-on: https://review.rdoproject.org/r/19132
+Project: openstack/tripleo-heat-templates-distgit
+Branch: refs/heads/rpm-master
