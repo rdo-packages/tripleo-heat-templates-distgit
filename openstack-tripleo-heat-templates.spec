@@ -75,12 +75,14 @@ cp -ar *.yaml %{buildroot}/%{_datadir}/%{name}
 cp -ar puppet %{buildroot}/%{_datadir}/%{name}
 cp -ar common %{buildroot}/%{_datadir}/%{name}
 cp -ar docker %{buildroot}/%{_datadir}/%{name}
-if [ -d deployment ]; then
-  cp -ar deployment %{buildroot}/%{_datadir}/%{name}
-fi
+cp -ar deployment %{buildroot}/%{_datadir}/%{name}
 
+# docker_config_scripts will be removed in Stein
 if [ -d docker_config_scripts ]; then
   cp -ar docker_config_scripts %{buildroot}/%{_datadir}/%{name}
+fi
+if [ -d container_config_scripts ]; then
+  cp -ar container_config_scripts %{buildroot}/%{_datadir}/%{name}
 fi
 cp -ar firstboot %{buildroot}/%{_datadir}/%{name}
 cp -ar extraconfig %{buildroot}/%{_datadir}/%{name}
