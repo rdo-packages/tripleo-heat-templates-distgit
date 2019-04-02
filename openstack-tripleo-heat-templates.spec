@@ -43,6 +43,7 @@ Requires:       ansible-role-thales-hsm
 Requires:       python%{pyver}-jinja2
 Requires:       python%{pyver}-six
 Requires:       openstack-tripleo-common >= 7.1.0
+Requires:       python%{pyver}-paunch >= 4.2.0
 %if %{pyver} == 2
 Requires:       PyYAML
 %else
