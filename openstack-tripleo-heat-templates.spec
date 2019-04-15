@@ -75,7 +75,9 @@ install -d -m 755 %{buildroot}/%{_datadir}/%{name}
 cp -ar *.yaml %{buildroot}/%{_datadir}/%{name}
 cp -ar puppet %{buildroot}/%{_datadir}/%{name}
 cp -ar common %{buildroot}/%{_datadir}/%{name}
-cp -ar docker %{buildroot}/%{_datadir}/%{name}
+if [ -d docker ] ; then
+  cp -ar docker %{buildroot}/%{_datadir}/%{name}
+fi
 cp -ar deployment %{buildroot}/%{_datadir}/%{name}
 
 # docker_config_scripts will be removed in Stein
