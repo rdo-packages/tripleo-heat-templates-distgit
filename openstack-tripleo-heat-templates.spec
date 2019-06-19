@@ -45,7 +45,6 @@ Requires:       python%{pyver}-paunch
 Requires:       python%{pyver}-jinja2
 Requires:       python%{pyver}-six
 Requires:       openstack-tripleo-common >= 7.1.0
-Requires:       tripleo-ansible
 %if %{pyver} == 2
 Requires:       PyYAML
 %else
