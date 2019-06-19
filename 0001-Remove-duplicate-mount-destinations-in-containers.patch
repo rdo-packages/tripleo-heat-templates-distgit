@@ -1,0 +1,39 @@
+From b6c88a99aaefb5b89ec04f4c85e131d559c575bc Mon Sep 17 00:00:00 2001
+From: Rabi Mishra <ramishra@redhat.com>
+Date: Wed, 19 Jun 2019 10:37:36 +0530
+Subject: [PATCH] Remove duplicate mount destinations in containers
+
+Change-Id: Ibbb4548f4cd5ea72a20bc1b0b7073cfb14be2068
+Closes-Bug: #1833347
+---
+ deployment/ironic/ironic-pxe-container-puppet.yaml         | 1 -
+ deployment/neutron/neutron-ovs-agent-container-puppet.yaml | 1 -
+ 2 files changed, 2 deletions(-)
+
+diff --git a/deployment/ironic/ironic-pxe-container-puppet.yaml b/deployment/ironic/ironic-pxe-container-puppet.yaml
+index 23aa80435..067969a47 100644
+--- a/deployment/ironic/ironic-pxe-container-puppet.yaml
++++ b/deployment/ironic/ironic-pxe-container-puppet.yaml
+@@ -122,7 +122,6 @@ outputs:
+                   - /var/lib/kolla/config_files/ironic_pxe_tftp.json:/var/lib/kolla/config_files/config.json:ro
+                   - /var/lib/config-data/puppet-generated/ironic/:/var/lib/kolla/config_files/src:ro
+                   - /var/lib/ironic:/var/lib/ironic/:shared,z
+-                  - /dev/log:/dev/log
+                   - /var/log/containers/ironic:/var/log/ironic:z
+                   - /var/log/containers/httpd/ironic-pxe:/var/log/httpd:z
+             environment:
+diff --git a/deployment/neutron/neutron-ovs-agent-container-puppet.yaml b/deployment/neutron/neutron-ovs-agent-container-puppet.yaml
+index 498d2e13d..1a61fd08a 100644
+--- a/deployment/neutron/neutron-ovs-agent-container-puppet.yaml
++++ b/deployment/neutron/neutron-ovs-agent-container-puppet.yaml
+@@ -280,7 +280,6 @@ outputs:
+                   - /var/lib/config-data/puppet-generated/neutron/:/var/lib/kolla/config_files/src:ro
+                   - /lib/modules:/lib/modules:ro
+                   - /run/openvswitch:/run/openvswitch:shared,z
+-                  - /etc/puppet:/etc/puppet:ro
+                   - /var/run/openvswitch/:/var/run/openvswitch/:shared,z
+                   -
+                     if:
+-- 
+2.20.1
+
