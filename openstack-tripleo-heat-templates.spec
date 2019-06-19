@@ -24,6 +24,8 @@ Group:          System Environment/Base
 URL:            https://wiki.openstack.org/wiki/TripleO
 Source0:        https://tarballs.openstack.org/tripleo-heat-templates/tripleo-heat-templates-%{upstream_version}.tar.gz
 
+Patch0001:      0001-Remove-duplicate-mount-destinations-in-containers.patch
+
 BuildArch:      noarch
 BuildRequires:  python%{pyver}-devel
 BuildRequires:  python%{pyver}-setuptools
@@ -60,6 +62,9 @@ building Heat Templates to do deployments of OpenStack.
 
 %prep
 %setup -q -n tripleo-heat-templates-%{upstream_version}
+
+# ignore failures so https://review.opendev.org/#/c/666220/ lands
+%patch0001 -f -p1 || true
 # Replace "env python" shebag to the correct python executable for the system
 # if we don't do that brp-mangle-shebangs will change it to python2
 for python_script in $(grep "/usr/bin/env python" . -rl)
