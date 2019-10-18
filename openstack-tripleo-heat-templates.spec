@@ -28,11 +28,6 @@ BuildArch:      noarch
 BuildRequires:  python%{pyver}-devel
 BuildRequires:  python%{pyver}-setuptools
 BuildRequires:  python%{pyver}-pbr
-%if %{pyver} == 2
-BuildRequires:  python-d2to1
-%else
-BuildRequires:  python%{pyver}-d2to1
-%endif
 
 Requires:       ansible-pacemaker
 Requires:       ansible-tripleo-ipsec
