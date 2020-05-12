@@ -1,15 +1,3 @@
-# Macros for py2/py3 compatibility
-%if 0%{?fedora} || 0%{?rhel} > 7
-%global pyver 3
-%else
-%global pyver 2
-%endif
-
-%global pyver_bin python%{pyver}
-%global pyver_sitelib %python%{pyver}_sitelib
-%global pyver_install %py%{pyver}_install
-%global pyver_build %py%{pyver}_build
-# End of macros for py2/py3 compatibility
 
 # guard for package OSP does not support
 %global rhosp 0
@@ -25,9 +13,9 @@ URL:            https://wiki.openstack.org/wiki/TripleO
 Source0:        https://tarballs.openstack.org/tripleo-heat-templates/tripleo-heat-templates-%{upstream_version}.tar.gz
 
 BuildArch:      noarch
-BuildRequires:  python%{pyver}-devel
-BuildRequires:  python%{pyver}-setuptools
-BuildRequires:  python%{pyver}-pbr
+BuildRequires:  python3-devel
+BuildRequires:  python3-setuptools
+BuildRequires:  python3-pbr
 
 Requires:       ansible-pacemaker
 Requires:       ansible-tripleo-ipsec
@@ -35,16 +23,12 @@ Requires:       ansible-role-atos-hsm
 Requires:       ansible-role-container-registry
 Requires:       ansible-role-chrony
 Requires:       ansible-role-thales-hsm
-Requires:       python%{pyver}-paunch
-Requires:       python%{pyver}-jinja2
-Requires:       python%{pyver}-six
+Requires:       python3-paunch
+Requires:       python3-jinja2
+Requires:       python3-six
 Requires:       openstack-tripleo-common >= 7.1.0
 Requires:       tripleo-ansible >= 1.1.0
-%if %{pyver} == 2
-Requires:       PyYAML
-%else
-Requires:       python%{pyver}-PyYAML
-%endif
+Requires:       python3-PyYAML
 %if 0%{rhosp} == 1
 Requires:       ansible-role-redhat-subscription
 %endif
@@ -59,14 +43,14 @@ building Heat Templates to do deployments of OpenStack.
 # if we don't do that brp-mangle-shebangs will change it to python2
 for python_script in $(grep "/usr/bin/env python" . -rl)
 do
-    sed -i "s#/usr/bin/env python.*#/usr/bin/%{pyver_bin}#g" $python_script
+    sed -i "s#/usr/bin/env python.*#/usr/bin/%{__python3}#g" $python_script
 done
 
 %build
-%{pyver_build}
+%{py3_build}
 
 %install
-%{pyver_install}
+%{py3_install}
 install -d -m 755 %{buildroot}/%{_datadir}/%{name}
 cp -ar *.yaml %{buildroot}/%{_datadir}/%{name}
 cp -ar puppet %{buildroot}/%{_datadir}/%{name}
@@ -101,15 +85,15 @@ if [ -d examples ]; then
   rm -rf examples
 fi
 
-if [ -d %{buildroot}/%{pyver_sitelib}/tripleo_heat_merge ]; then
-  rm -rf %{buildroot}/%{pyver_sitelib}/tripleo_heat_merge
+if [ -d %{buildroot}/%{python3_sitelib}/tripleo_heat_merge ]; then
+  rm -rf %{buildroot}/%{python3_sitelib}/tripleo_heat_merge
   rm -f %{buildroot}/%{_bindir}/tripleo-heat-merge
 fi
 
 %files
 %doc README*
 %license LICENSE
-%{pyver_sitelib}/tripleo_heat_templates-*.egg-info
+%{python3_sitelib}/tripleo_heat_templates-*.egg-info
 %{_datadir}/%{name}
 
 %changelog
