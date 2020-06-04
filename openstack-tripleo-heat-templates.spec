@@ -23,7 +23,6 @@ Requires:       ansible-role-atos-hsm
 Requires:       ansible-role-container-registry
 Requires:       ansible-role-chrony
 Requires:       ansible-role-thales-hsm
-Requires:       python3-paunch
 Requires:       python3-jinja2
 Requires:       python3-six
 Requires:       openstack-tripleo-common >= 7.1.0
