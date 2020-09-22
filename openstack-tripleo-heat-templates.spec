@@ -22,6 +22,7 @@ Requires:       ansible-tripleo-ipsec
 Requires:       ansible-role-atos-hsm
 Requires:       ansible-role-container-registry
 Requires:       ansible-role-chrony
+Requires:       ansible-role-lunasa-hsm
 Requires:       ansible-role-thales-hsm
 Requires:       python3-paunch
 Requires:       python3-jinja2
