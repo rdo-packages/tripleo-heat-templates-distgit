@@ -42,6 +42,7 @@ Requires:       python3-six
 Requires:       openstack-tripleo-common >= 7.1.0
 Requires:       tripleo-ansible >= 1.1.0
 Requires:       python3-PyYAML
+Requires:       rhel-system-roles
 %if 0%{rhosp} == 1
 Requires:       ansible-role-redhat-subscription
 %endif
