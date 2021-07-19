@@ -7,7 +7,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 Name:           openstack-tripleo-heat-templates
 Summary:        Heat templates for TripleO
-Version:        14.1.2
+Version:        14.2.0
 Release:        1%{?dist}
 License:        ASL 2.0
 Group:          System Environment/Base
@@ -117,6 +117,9 @@ fi
 %{_datadir}/%{name}
 
 %changelog
+* Mon Jul 19 2021 RDO <dev@lists.rdoproject.org> 14.2.0-1
+- Update to 14.2.0
+
 * Mon Jun 14 2021 RDO <dev@lists.rdoproject.org> 14.1.2-1
 - Update to 14.1.2
 
