@@ -6,13 +6,18 @@
 Name:           openstack-tripleo-heat-templates
 Summary:        Heat templates for TripleO
 Version:        12.4.5
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        ASL 2.0
 Group:          System Environment/Base
 URL:            https://wiki.openstack.org/wiki/TripleO
 Source0:        https://tarballs.openstack.org/tripleo-heat-templates/tripleo-heat-templates-%{upstream_version}.tar.gz
 
+%if ! 0%{?dlrn}
+Patch0001: 0001-Configure-Ceph-to-not-use-separte-db-wal-LVs.patch
+%endif
+
 BuildArch:      noarch
+BuildRequires:  git
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
 BuildRequires:  python3-pbr
@@ -39,7 +44,7 @@ OpenStack TripleO Heat Templates is a collection of templates and tools for
 building Heat Templates to do deployments of OpenStack.
 
 %prep
-%setup -q -n tripleo-heat-templates-%{upstream_version}
+%autosetup -n tripleo-heat-templates-%{upstream_version} -S git
 # Replace "env python" shebag to the correct python executable for the system
 # if we don't do that brp-mangle-shebangs will change it to python2
 for python_script in $(grep "/usr/bin/env python" . -rl)
@@ -98,6 +103,9 @@ fi
 %{_datadir}/%{name}
 
 %changelog
+* Fri Aug 20 2021 Yatin Karel <ykarel@redhat.com> - 12.4.5-2
+- Apply patch Configure-Ceph-to-not-use-separte-db-wal-LVs
+
 * Wed Jul 28 2021 RDO <dev@lists.rdoproject.org> 12.4.5-1
 - Update to 12.4.5
 
