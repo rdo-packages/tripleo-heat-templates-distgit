@@ -1,0 +1,94 @@
+From 3b9383bfa24815180078088155031af0900d5667 Mon Sep 17 00:00:00 2001
+From: Francesco Pantano <fpantano@redhat.com>
+Date: Sun, 8 Aug 2021 12:08:58 +0200
+Subject: [PATCH] Configure Ceph to not use separte db/wal LVs
+
+Depends-On: Ie71b88ef7305c600a63a4765a719890aab337907
+Change-Id: I116a0e9d7fadca525c1e8f5328df77235379c09c
+(cherry picked from commit 11d7b8ad499faa5c231fbda15da4e680bd4894e5)
+---
+ ci/environments/scenario001-multinode-containers.yaml | 4 ----
+ ci/environments/scenario001-standalone.yaml           | 4 ----
+ ci/environments/scenario004-standalone.yaml           | 4 ----
+ ci/environments/scenario010-multinode-containers.yaml | 4 ----
+ ci/environments/scenario010-standalone.yaml           | 4 ----
+ 5 files changed, 20 deletions(-)
+
+diff --git a/ci/environments/scenario001-multinode-containers.yaml b/ci/environments/scenario001-multinode-containers.yaml
+index 463c56979..29040a9e0 100644
+--- a/ci/environments/scenario001-multinode-containers.yaml
++++ b/ci/environments/scenario001-multinode-containers.yaml
+@@ -126,10 +126,6 @@ parameter_defaults:
+     lvm_volumes:
+       - data: ceph_lv_data
+         data_vg: ceph_vg
+-        db: ceph_lv_db
+-        db_vg: ceph_vg
+-        wal: ceph_lv_wal
+-        wal_vg: ceph_vg
+   CephPoolDefaultPgNum: 32
+   CephAnsibleRepo: "tripleo-centos-ceph-nautilus"
+   CephPoolDefaultSize: 1
+diff --git a/ci/environments/scenario001-standalone.yaml b/ci/environments/scenario001-standalone.yaml
+index 2c342a4b6..ca8da4e29 100644
+--- a/ci/environments/scenario001-standalone.yaml
++++ b/ci/environments/scenario001-standalone.yaml
+@@ -64,10 +64,6 @@ parameter_defaults:
+     lvm_volumes:
+       - data: ceph_lv_data
+         data_vg: ceph_vg
+-        db: ceph_lv_db
+-        db_vg: ceph_vg
+-        wal: ceph_lv_wal
+-        wal_vg: ceph_vg
+   CephPoolDefaultPgNum: 32
+   CephPoolDefaultSize: 1
+   CephEnableDashboard: true
+diff --git a/ci/environments/scenario004-standalone.yaml b/ci/environments/scenario004-standalone.yaml
+index a5d9b5d40..7c0cc6d4e 100644
+--- a/ci/environments/scenario004-standalone.yaml
++++ b/ci/environments/scenario004-standalone.yaml
+@@ -37,10 +37,6 @@ parameter_defaults:
+     lvm_volumes:
+       - data: ceph_lv_data
+         data_vg: ceph_vg
+-        db: ceph_lv_db
+-        db_vg: ceph_vg
+-        wal: ceph_lv_wal
+-        wal_vg: ceph_vg
+   CephPoolDefaultPgNum: 32
+   CephPoolDefaultSize: 1
+   CephAnsibleExtraConfig:
+diff --git a/ci/environments/scenario010-multinode-containers.yaml b/ci/environments/scenario010-multinode-containers.yaml
+index 03592d6b0..c987981bf 100644
+--- a/ci/environments/scenario010-multinode-containers.yaml
++++ b/ci/environments/scenario010-multinode-containers.yaml
+@@ -83,10 +83,6 @@ parameter_defaults:
+     lvm_volumes:
+       - data: ceph_lv_data
+         data_vg: ceph_vg
+-        db: ceph_lv_db
+-        db_vg: ceph_vg
+-        wal: ceph_lv_wal
+-        wal_vg: ceph_vg
+   CephPoolDefaultPgNum: 32
+   CephPoolDefaultSize: 1
+   CephPools:
+diff --git a/ci/environments/scenario010-standalone.yaml b/ci/environments/scenario010-standalone.yaml
+index bd1354516..4fc219f87 100644
+--- a/ci/environments/scenario010-standalone.yaml
++++ b/ci/environments/scenario010-standalone.yaml
+@@ -41,10 +41,6 @@ parameter_defaults:
+     lvm_volumes:
+       - data: ceph_lv_data
+         data_vg: ceph_vg
+-        db: ceph_lv_db
+-        db_vg: ceph_vg
+-        wal: ceph_lv_wal
+-        wal_vg: ceph_vg
+   CephPoolDefaultPgNum: 32
+   CephPoolDefaultSize: 1
+   CephAnsibleExtraConfig:
+-- 
+2.20.1
+
