@@ -92,6 +92,9 @@ cp -ar network %{buildroot}/%{_datadir}/%{name}
 if [ -d networks ]; then
   cp -ar networks %{buildroot}/%{_datadir}/%{name}
 fi
+if [ -d network-data-samples ]; then
+  cp -ar network-data-samples %{buildroot}/%{_datadir}/%{name}
+fi
 if [ -d validation-scripts ]; then
   cp -ar validation-scripts %{buildroot}/%{_datadir}/%{name}
 fi
