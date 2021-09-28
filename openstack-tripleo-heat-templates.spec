@@ -120,3 +120,4 @@ fi
 %{_datadir}/%{name}
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/tripleo-heat-templates/commit/436931f3b97a8a6f3591470581f293faaf3a7791
