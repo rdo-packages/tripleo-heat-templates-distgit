@@ -38,7 +38,6 @@ Requires:       ansible-role-chrony
 Requires:       ansible-role-lunasa-hsm
 Requires:       ansible-role-thales-hsm
 Requires:       python3-jinja2
-Requires:       python3-six
 Requires:       openstack-tripleo-common >= 7.1.0
 Requires:       tripleo-ansible >= 1.1.0
 Requires:       python3-PyYAML
