@@ -5,8 +5,8 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 Name:           openstack-tripleo-heat-templates
 Summary:        Heat templates for TripleO
-Version:        12.4.5
-Release:        2%{?dist}
+Version:        12.4.6
+Release:        1%{?dist}
 License:        ASL 2.0
 Group:          System Environment/Base
 URL:            https://wiki.openstack.org/wiki/TripleO
@@ -103,6 +103,9 @@ fi
 %{_datadir}/%{name}
 
 %changelog
+* Thu Mar 10 2022 RDO <dev@lists.rdoproject.org> 12.4.6-1
+- Update to 12.4.6
+
 * Fri Aug 20 2021 Yatin Karel <ykarel@redhat.com> - 12.4.5-2
 - Apply patch Configure-Ceph-to-not-use-separte-db-wal-LVs
 
