@@ -134,3 +134,4 @@ fi
 * Mon Nov 02 2020 RDO <dev@lists.rdoproject.org> 13.0.0-1
 - Update to 13.0.0
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/tripleo-heat-templates/commit/5a8fb6d1c90d44d69abb95e9b5c7ab3104180215
