@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "3e34be5fc140345ddf1d60d4d779aab580d2868b",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "51d373e2_b24fd83e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2022-04-14T17:20:04Z",
+      "side": 1,
+      "message": "- nothing provides tripleo-ansible",
+      "revId": "3e34be5fc140345ddf1d60d4d779aab580d2868b",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
