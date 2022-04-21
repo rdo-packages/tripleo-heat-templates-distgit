@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x4c29ff0e437f3351fd82bdf47c5a3bc787dc7035
+%global sources_gpg_sign 0xa63ea142678138d1bb15f2e303bdfd64dd164087
 
 # guard for package OSP does not support
 %global rhosp 0
@@ -7,7 +7,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 Name:           openstack-tripleo-heat-templates
 Summary:        Heat templates for TripleO
-Version:        13.5.0
+Version:        13.6.0
 Release:        1%{?dist}
 License:        ASL 2.0
 Group:          System Environment/Base
@@ -116,6 +116,9 @@ fi
 %{_datadir}/%{name}
 
 %changelog
+* Thu Apr 21 2022 RDO <dev@lists.rdoproject.org> 13.6.0-1
+- Update to 13.6.0
+
 * Mon Aug 30 2021 RDO <dev@lists.rdoproject.org> 13.5.0-1
 - Update to 13.5.0
 
