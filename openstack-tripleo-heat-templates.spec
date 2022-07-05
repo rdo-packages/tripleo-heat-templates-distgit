@@ -72,40 +72,19 @@ install -d -m 755 %{buildroot}/%{_datadir}/%{name}
 cp -ar *.yaml %{buildroot}/%{_datadir}/%{name}
 cp -ar puppet %{buildroot}/%{_datadir}/%{name}
 cp -ar common %{buildroot}/%{_datadir}/%{name}
-if [ -d docker ] ; then
-  cp -ar docker %{buildroot}/%{_datadir}/%{name}
-fi
 cp -ar deployment %{buildroot}/%{_datadir}/%{name}
-
-# docker_config_scripts will be removed in Stein
-if [ -d docker_config_scripts ]; then
-  cp -ar docker_config_scripts %{buildroot}/%{_datadir}/%{name}
-fi
-if [ -d container_config_scripts ]; then
-  cp -ar container_config_scripts %{buildroot}/%{_datadir}/%{name}
-fi
+cp -ar container_config_scripts %{buildroot}/%{_datadir}/%{name}
 cp -ar firstboot %{buildroot}/%{_datadir}/%{name}
 cp -ar extraconfig %{buildroot}/%{_datadir}/%{name}
 cp -ar environments %{buildroot}/%{_datadir}/%{name}
 cp -ar network %{buildroot}/%{_datadir}/%{name}
-if [ -d networks ]; then
-  cp -ar networks %{buildroot}/%{_datadir}/%{name}
-fi
-if [ -d network-data-samples ]; then
-  cp -ar network-data-samples %{buildroot}/%{_datadir}/%{name}
-fi
-if [ -d validation-scripts ]; then
-  cp -ar validation-scripts %{buildroot}/%{_datadir}/%{name}
-fi
+cp -ar network-data-samples %{buildroot}/%{_datadir}/%{name}
 cp -ar deployed-server %{buildroot}/%{_datadir}/%{name}
 cp -ar ci %{buildroot}/%{_datadir}/%{name}
 cp -ar plan-samples %{buildroot}/%{_datadir}/%{name}
 cp -ar roles %{buildroot}/%{_datadir}/%{name}
 cp -ar scripts %{buildroot}/%{_datadir}/%{name}
 cp -ar tools %{buildroot}/%{_datadir}/%{name}
-if [ -d examples ]; then
-  rm -rf examples
-fi
 
 if [ -d %{buildroot}/%{python3_sitelib}/tripleo_heat_merge ]; then
   rm -rf %{buildroot}/%{python3_sitelib}/tripleo_heat_merge
