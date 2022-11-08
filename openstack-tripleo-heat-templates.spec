@@ -99,7 +99,6 @@ if [ -d validation-scripts ]; then
 fi
 cp -ar deployed-server %{buildroot}/%{_datadir}/%{name}
 cp -ar ci %{buildroot}/%{_datadir}/%{name}
-cp -ar plan-samples %{buildroot}/%{_datadir}/%{name}
 cp -ar roles %{buildroot}/%{_datadir}/%{name}
 cp -ar scripts %{buildroot}/%{_datadir}/%{name}
 cp -ar tools %{buildroot}/%{_datadir}/%{name}
