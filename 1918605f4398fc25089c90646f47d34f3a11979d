@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "27978014_b761fb56",
+        "filename": "openstack-tripleo-heat-templates.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 439
+      },
+      "writtenOn": "2022-11-08T16:01:34Z",
+      "side": 1,
+      "message": "The release should be bumped.",
+      "revId": "1918605f4398fc25089c90646f47d34f3a11979d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
