@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ba24f4b_dda25bf0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 439
+      },
+      "writtenOn": "2022-11-08T15:59:15Z",
+      "side": 1,
+      "message": "lgtm, but I don\u0027t have core voting rights in this repo.",
+      "revId": "f9c988306de81efaefaa8e6ba75b57d4f0db81e8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
