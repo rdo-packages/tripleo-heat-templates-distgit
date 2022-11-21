@@ -94,6 +94,9 @@ fi
 if [ -d network-data-samples ]; then
   cp -ar network-data-samples %{buildroot}/%{_datadir}/%{name}
 fi
+if [ -d baremetal-samples ]; then
+  cp -ar baremetal-samples %{buildroot}/%{_datadir}/%{name}
+fi
 if [ -d validation-scripts ]; then
   cp -ar validation-scripts %{buildroot}/%{_datadir}/%{name}
 fi
