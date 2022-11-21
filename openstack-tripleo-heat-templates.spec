@@ -8,7 +8,7 @@
 Name:           openstack-tripleo-heat-templates
 Summary:        Heat templates for TripleO
 Version:        14.3.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        ASL 2.0
 Group:          System Environment/Base
 URL:            https://wiki.openstack.org/wiki/TripleO
@@ -95,6 +95,9 @@ fi
 if [ -d network-data-samples ]; then
   cp -ar network-data-samples %{buildroot}/%{_datadir}/%{name}
 fi
+if [ -d baremetal-samples ]; then
+  cp -ar baremetal-samples %{buildroot}/%{_datadir}/%{name}
+fi
 if [ -d validation-scripts ]; then
   cp -ar validation-scripts %{buildroot}/%{_datadir}/%{name}
 fi
@@ -120,6 +123,9 @@ fi
 %{_datadir}/%{name}
 
 %changelog
+* Tue Dev 20 2022 Harald Jensas <hjensas@redhat.com> 14.3.0-2
+- Include baremetal-samples directory in package. BZ#2137594
+
 * Mon Aug 16 2021 RDO <dev@lists.rdoproject.org> 14.3.0-1
 - Update to 14.3.0
 
