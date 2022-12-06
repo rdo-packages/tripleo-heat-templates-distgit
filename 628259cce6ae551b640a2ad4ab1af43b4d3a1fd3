@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "837b0249_47d26aba",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2022-12-06T06:25:07Z",
+      "side": 1,
+      "message": "unrelated failure, tempest failed due to kernel panic",
+      "revId": "628259cce6ae551b640a2ad4ab1af43b4d3a1fd3",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
