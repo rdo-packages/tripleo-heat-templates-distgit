@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ea67899_f5ee5e2d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2022-12-06T05:15:54Z",
+      "side": 1,
+      "message": "unrleated failure in TripleO job, it\u0027s broken, attempting fix https://review.rdoproject.org/r/c/rdo-jobs/+/46356",
+      "revId": "ab3a231bd26506112d7a16eb5a188e04c7af4bad",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
