@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e524aec_2707d5e6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2022-12-20T14:46:54Z",
+      "side": 1,
+      "message": "small typo",
+      "revId": "661167aef176783b2e05ea3c79121ddefa82f19c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "90000922_65cc8533",
+        "filename": "openstack-tripleo-heat-templates.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2022-12-20T14:46:54Z",
+      "side": 1,
+      "message": "Dec",
+      "range": {
+        "startLine": 125,
+        "startChar": 6,
+        "endLine": 125,
+        "endChar": 9
+      },
+      "revId": "661167aef176783b2e05ea3c79121ddefa82f19c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
