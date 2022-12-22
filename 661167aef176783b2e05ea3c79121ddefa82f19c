@@ -39,6 +39,30 @@
       },
       "revId": "661167aef176783b2e05ea3c79121ddefa82f19c",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bee2ca48_4e9a719a",
+        "filename": "openstack-tripleo-heat-templates.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 469
+      },
+      "writtenOn": "2022-12-22T08:08:56Z",
+      "side": 1,
+      "message": "Oops, sausage fingers.",
+      "parentUuid": "90000922_65cc8533",
+      "range": {
+        "startLine": 125,
+        "startChar": 6,
+        "endLine": 125,
+        "endChar": 9
+      },
+      "revId": "661167aef176783b2e05ea3c79121ddefa82f19c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
