@@ -22,6 +22,30 @@
       },
       "revId": "b4e8525437ed47412d11fa630c6d40ad21c0f223",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e90429ec_d9f46e5e",
+        "filename": "openstack-tripleo-heat-templates.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 469
+      },
+      "writtenOn": "2022-12-22T11:46:15Z",
+      "side": 1,
+      "message": "indeed, /me --\n\nDone.",
+      "parentUuid": "de1e1cfe_cc79d581",
+      "range": {
+        "startLine": 125,
+        "startChar": 13,
+        "endLine": 125,
+        "endChar": 17
+      },
+      "revId": "b4e8525437ed47412d11fa630c6d40ad21c0f223",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
