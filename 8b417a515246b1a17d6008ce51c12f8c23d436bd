@@ -41,6 +41,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5fed7a21_f160ad04",
+        "filename": "openstack-tripleo-heat-templates.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 469
+      },
+      "writtenOn": "2022-12-22T08:10:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a6d2fbaf_14989e00",
+      "range": {
+        "startLine": 11,
+        "startChar": 16,
+        "endLine": 11,
+        "endChar": 17
+      },
+      "revId": "8b417a515246b1a17d6008ce51c12f8c23d436bd",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "10b5f378_981f3f8c",
@@ -54,6 +78,30 @@
       "writtenOn": "2022-12-20T14:30:33Z",
       "side": 1,
       "message": "we need a new changelog entry",
+      "range": {
+        "startLine": 125,
+        "startChar": 0,
+        "endLine": 126,
+        "endChar": 18
+      },
+      "revId": "8b417a515246b1a17d6008ce51c12f8c23d436bd",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8ed67325_4e008007",
+        "filename": "openstack-tripleo-heat-templates.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 469
+      },
+      "writtenOn": "2022-12-22T08:10:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "10b5f378_981f3f8c",
       "range": {
         "startLine": 125,
         "startChar": 0,
