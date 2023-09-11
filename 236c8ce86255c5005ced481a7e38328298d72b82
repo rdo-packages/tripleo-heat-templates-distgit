@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6cdf46de_d1d5e05b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 96
+      },
+      "writtenOn": "2023-09-11T15:51:25Z",
+      "side": 1,
+      "message": "This doesn\u0027t look related to the commit. The build failure was due to a failure to download repo metadata:\n\n2023-09-11 13:57:23.070116 | rdo-centos-8-stream | 2023-09-11 13:57:23,070 INFO:dlrn-build:Errors during downloading metadata for repository \u0027Stream-BaseOS\u0027:\n2023-09-11 13:57:23.070329 | rdo-centos-8-stream | 2023-09-11 13:57:23,070 INFO:dlrn-build:  - Status code: 404 for http://mirror.centos.org/centos/8-stream/BaseOS/x86_64/os/repodata/09458e3d6938f58400c54f59a52f3e487a9aff193c7c3c253f8733e3c14a9844-filelists.xml.gz (IP: 192.240.166.165)\n2023-09-11 13:57:23.070414 | rdo-centos-8-stream | 2023-09-11 13:57:23,070 INFO:dlrn-build:  - Status code: 404 for http://mirror.centos.org/centos/8-stream/BaseOS/x86_64/os/repodata/c4fc5069c35fe231fd031be656c9571bec94e3b6499b8627b118de8161fd45ee-primary.xml.gz (IP: 192.240.166.165)\n2023-09-11 13:57:23.070484 | rdo-centos-8-stream | 2023-09-11 13:57:23,070 INFO:dlrn-build:Error: Failed to download metadata for repo \u0027Stream-BaseOS\u0027: Yum repo downloading error: Downloading error(s): repodata/c4fc5069c35fe231fd031be656c9571bec94e3b6499b8627b118de8161fd45ee-primary.xml.gz - Cannot download, all mirrors were already tried without success; repodata/09458e3d6938f58400c54f59a52f3e487a9aff193c7c3c253f8733e3c14a9844-filelists.xml.gz - Cannot download, all mirrors were already tried without success",
+      "revId": "236c8ce86255c5005ced481a7e38328298d72b82",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
