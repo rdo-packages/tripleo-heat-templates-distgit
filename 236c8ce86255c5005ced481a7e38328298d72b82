@@ -33,6 +33,24 @@
       "message": "recheck",
       "revId": "236c8ce86255c5005ced481a7e38328298d72b82",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "23dd1789_6ff24df5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-09-14T11:57:47Z",
+      "side": 1,
+      "message": "Yeah it was due to infra issue\nI rechecked the build in Trunk, it\u0027s ok now [1]\n\n[1] https://trunk.rdoproject.org/centos8-wallaby/component/tripleo/1f/a7/1fa778b4241ae65bc51555ecbe98babbcc34b76a_68daafa5/rpmbuild.log",
+      "parentUuid": "6cdf46de_d1d5e05b",
+      "revId": "236c8ce86255c5005ced481a7e38328298d72b82",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
